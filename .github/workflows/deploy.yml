@@ -2,27 +2,23 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]  # Se déclenche sur les pushes vers 'main'
+    branches: [ "main" ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # Permet d'écrire sur la branche gh-pages
-      pages: write    # Nécessaire pour GitHub Pages
-      id-token: write # Permet au GITHUB_TOKEN de déployer
+      contents: write
+      pages: write
+      id-token: write
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: './src'  # Dossier contenant tes fichiers HTML
-
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./src
+          force_orphan: true
