@@ -972,6 +972,8 @@
     ".searchClose",
     "show"
   );
-
+  const API_KEY = "12345-FAKE-KEY-SECRET"; // Exemple de vulnérabilité
+  console.log(API_KEY);
+  
   // End
 })(jQuery);
