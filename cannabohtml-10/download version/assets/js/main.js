@@ -972,8 +972,10 @@
     ".searchClose",
     "show"
   );
-  const API_KEY = "12345-FAKE-KEY-SECRET"; // Exemple de vulnérabilité
-  console.log(API_KEY);
+ // const API_KEY = "12345-FAKE-KEY-SECRET"; // Exemple de vulnérabilité
+  //console.log(API_KEY);
+  const API_KEY = process.env.API_KEY;  // Remplacer la clé en dur
+
   
   // End
 })(jQuery);
