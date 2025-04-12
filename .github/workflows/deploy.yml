@@ -24,4 +24,4 @@ jobs:
       - name: Deploy
         run: npm run deploy
         env:
-          API_KEY: ${{ 2122003 }}
+          API_KEY: ${{ secrets.API_KEY }}  # Access the secret API_KEY
