@@ -1,0 +1,27 @@
+# Fichiers temporaires
+*.tmp
+*.log
+# Fichiers de configuration locaux
+.env
+.vscode/
+# Dépendances
+node_modules/
+vendor/
+# Fichiers de cache
+.cache/
+dist/
+# Fichiers de sauvegarde
+*.bak
+# Fichiers de système d'exploitation
+.DS_Store
+Thumbs.db
+# Fichiers de déploiement
+build/
+deploy/
+# Fichiers de logs
+logs/
+*.log
+# Fichiers de données sensibles
+*.key
+*.pem
+*.cert
