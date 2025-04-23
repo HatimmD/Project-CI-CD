@@ -16,5 +16,5 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: npm run deploy
-        env:
-          API_KEY: ${{ PFA }}  # Access the API key securely
+       env:
+        API_KEY: ${{ secrets.API_KEY }}
