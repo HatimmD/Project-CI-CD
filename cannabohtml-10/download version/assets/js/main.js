@@ -973,6 +973,6 @@
     "show"
   );
   const API_KEY = process.env.API_KEY;
-
+  console.log("API Key:", API_KEY);
   
 })(jQuery);
