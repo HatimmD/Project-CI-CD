@@ -972,7 +972,11 @@
     ".searchClose",
     "show"
   );
-  const API_KEY = process.env.API_KEY;
-  console.log("API Key:", API_KEY);
+const API_KEY = process.env.API_KEY;
+const PFA_HATIM = process.env.PFA_HATIM;
+
+console.log("API Key:", API_KEY);
+console.log("PFA Hatim:", PFA_HATIM);
+
   
 })(jQuery);
