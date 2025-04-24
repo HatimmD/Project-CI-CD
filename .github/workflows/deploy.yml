@@ -1,3 +1,10 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Trigger on push to main branch
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -16,5 +23,6 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: npm run deploy
-       env:
-        API_KEY: ${{ secrets.API_KEY }}
+        env:
+          API_KEY: ${{ API_KEY }}
+          PFA_HATIM: ${{ some secret data }}
