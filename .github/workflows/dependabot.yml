@@ -1,0 +1,9 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"  # This tells Dependabot to monitor npm packages
+    directory: "/"  # The root directory of your project (change if your package.json is in a different folder)
+    schedule:
+      interval: "weekly"  # Frequency of the updates: can be "daily", "weekly", or "monthly"
+    open-pull-requests-limit: 5  # Limit the number of open PRs Dependabot can create at a time
+    allow:
+      - dependency-type: "direct"  # This allows Dependabot to update direct dependencies (from package.json)
