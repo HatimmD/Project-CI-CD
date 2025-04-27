@@ -18,13 +18,16 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install dependencies
-        run: npm install
-
       - name: Configure Git identity
         run: |
           git config --global user.name "HatimmD"
           git config --global user.email "hdaanoun2014@gmail.com"
+
+      - name: Set up GitHub authentication
+        run: git config --global credential.helper 'cache --timeout=3600'
+
+      - name: Install dependencies
+        run: npm install
 
       - name: Deploy to GitHub Pages
         run: npm run deploy
