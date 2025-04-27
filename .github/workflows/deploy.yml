@@ -24,5 +24,5 @@ jobs:
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
-          API_KEY: ${{ API_KEY }}
-          PFA_HATIM: ${{ some secret data }}
+          API_KEY: ${{ secrets.API_KEY }}  # Correct usage of GitHub secret
+          PFA_HATIM: ${{ secrets.PFA_HATIM }}  # Correct usage of GitHub secret
