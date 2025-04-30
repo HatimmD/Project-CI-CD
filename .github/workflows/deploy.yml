@@ -24,7 +24,10 @@ jobs:
           git config --global user.email "hdaanoun2014@gmail.com"
 
       - name: Set up GitHub authentication
-        run: git config --global credential.helper 'cache --timeout=3600'  # Cache credentials for 1 hour
+        run: |
+          git config --global credential.helper 'cache --timeout=3600'  # Cache credentials for 1 hour
+          git config --global user.name "HatimmD"  # GitHub Actions username
+          git config --global user.email "hdaanoun2014@gmail.com"  # GitHub Actions email
 
       - name: Install dependencies
         run: npm install
