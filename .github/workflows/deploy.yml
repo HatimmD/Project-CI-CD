@@ -24,7 +24,7 @@ jobs:
           git config --global user.email "hdaanoun2014@gmail.com"
 
       - name: Set up GitHub authentication
-        run: git config --global credential.helper 'cache --timeout=3600'
+        run: git config --global credential.helper 'cache --timeout=3600'  # Cache credentials for 1 hour
 
       - name: Install dependencies
         run: npm install
@@ -32,5 +32,6 @@ jobs:
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
-          API_KEY: ${{ secrets.API_KEY }}  # Use the secret API_KEY securely
-          PFA_HATIM: ${{ secrets.PFA_HATIM }}  # Use the secret PFA_HATIM securely
+          API_KEY: ${{ secrets.SECRET_CI }}  # Use the updated secret API_KEY securely
+          PFA_HATIM: ${{ secrets.SECRET_PFA }}  # Use the updated secret PFA_HATIM securely
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use GitHub token for authentication
